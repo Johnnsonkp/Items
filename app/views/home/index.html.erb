@@ -7,11 +7,11 @@
             <p>An app for organising, prioritising and storing all your online shopping<br> in the one place.</p>
         </div>
         <div class="btns">
-            <button class="sign-in">
+            <button class="sign-in"> <i class="fas fa-chevron-left"></i>
                 <% if user_signed_in? %>   
                     <%= link_to "Show Cart", items_path %>
                 <% else %>
-                    <%= link_to "<< Lets Get Started!", new_user_registration_path %>
+                    <%= link_to " Lets Get Started!", new_user_registration_path %>
                 <% end %>
             </button>
         </div>
