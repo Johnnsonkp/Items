@@ -1,3 +1,4 @@
+<% if false %>
 <%= form_with(model: item) do |form| %>
   <% if item.errors.any? %>
     <div id="error_explanation">
@@ -55,3 +56,101 @@
     <%= form.submit %>
   </div>
 <% end %>
+<% end %>
+
+
+<section id="items-forms">
+  <%= simple_form_for @item, html:{ multipart: true } do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+    <div class="form-inputs control">
+
+      <span class="inline">
+        <div class='title'>
+          <%= f.input :title, required: true, input_html: { class: "input"}, wrapper: false, label_html: {class:"label"} %>
+        </div>
+
+        <div class='price control'>
+          <%= f.input :price, required: true, input_html: { class: "input", maxlength: 7 }, wrapper: false, label_html: { class:"label"}%>
+        </div>
+      </span>
+
+      <div class='url'>
+          <%= f.input :url, required: true, input_html: { class: "input"}, wrapper: false, label_html: {class:"label"} %>
+      </div>
+
+      <div class='description control'>
+        <%= f.input :description, required: true, input_html: {class:"textarea"}, wrapper: false, label_html: {class:"label"}%>
+      </div>
+
+      <span class="drop-downs">
+        <div class='size control'>
+          <label class="label">Size</label>
+          <div class="control has-icons-left">
+            <span class="select">
+              <%= f.input_field :size, collection: Item::SIZE, prompt: "Select Size"%>
+            </span>
+            <span class="icon is-small is-left">
+              <i class="fa fa-tag"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class='color control'>
+          <label class="label">Color</label>
+          <div class="control has-icons-left">
+            <span class="select">
+              <%= f.input_field :color, collection: Item::COLOR, prompt: "Select Color"%>
+            </span>
+            <span class="icon is-small is-left">
+              <i class="fa fa-tag"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class='brand control'>
+          <label class="label">Brand</label>
+          <div class="control has-icons-left">
+            <span class="select">
+              <%= f.input_field :brand, collection: Item::BRAND, prompt: "Select Brand"%>
+            </span>
+            <span class="icon is-small is-left">
+              <i class="fa fa-tag"></i>
+            </span>
+          </div>
+        </div>
+
+
+        <div class='condition control'>
+          <label class="label">Condition</label>
+          <div class="control has-icons-left">
+            <span class="select">
+              <%= f.input_field :brand, collection: Item::CONDITION, prompt: "Select condition"%>
+            </span>
+            <span class="icon is-small is-left">
+              <i class="fa fa-tag"></i>
+            </span>
+          </div>
+        </div>        
+
+        <%= form_with(model: item) do |form| %>
+          <div class='field form-group'>
+              <%= form.number_field :user_id, id: :item_user_id, class:"form-control", value: current_user.id, type: :hidden %>
+          </div>
+        <% end %>
+
+      </span>
+      <div class="hr-container">
+        <hr>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+        <%# <hr> %>
+          <%= f.button :submit, class: 'button is-warning' %>
+          <%= link_to 'Cancel', items_path, class:'button is-light' %>
+        </div>
+      </div>
+
+  <% end %>
