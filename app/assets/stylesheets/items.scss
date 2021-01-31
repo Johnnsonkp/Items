@@ -1,0 +1,63 @@
+// Place all the styles related to the items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+#items-index {
+    height: 100vh;
+    background-color: #F7F7F7;
+    #notice{
+        display: none;
+    }
+    .div-container{
+        border: solid 1px black;
+        position: absolute;
+        top: 26%;
+        left: 5%;
+    }
+    
+    h1 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 50px;
+        font-size: 3.1vw;
+        position: absolute;
+        color: #fff;
+        text-shadow: 2px 2px black;
+    }
+    table{
+        margin-top: 70px;
+        z-index: 1;
+    }
+    th, td{
+        border: solid 1px black;
+    }
+    th{
+        background-color: #343a40;
+        border-color: #454d55;
+        color: #fff;
+        padding-left: 10px;
+        padding-right: 45px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    td{
+        padding-left: 10px;
+        padding-right: 45px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        
+    }
+    tr:nth-of-type(even){
+        background-color: rgba(17, 17, 17, 0.2);
+    }
+    .btn{
+        border: solid 1px #454d55;
+        background-color: #454d55;
+        color: #fff;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+    }
+}
+

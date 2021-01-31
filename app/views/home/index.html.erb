@@ -1,0 +1,20 @@
+<section id="home-index">
+    <%# <div class="container"> %>
+        <div class="showcase"></div>
+        <div class="transparent"></div>
+        <div class="text">
+            <h1>Welcome to Items! </h1>
+            <p>Combining all your online shopping into one place Combining all your<br> online shopping into one place</p>
+        </div>
+        <div class="btns">
+            <button class="sign-in">
+                <% if user_signed_in? %>   
+                    <%= link_to "Show Cart", items_path %>
+                <% else %>
+                    <%= link_to "<< Lets Get Started!", new_user_registration_path %>
+                <% end %>
+            </button>
+        </div>
+    <%# </div> %>
+
+</section>
