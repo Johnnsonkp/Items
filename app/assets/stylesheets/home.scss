@@ -69,11 +69,16 @@
         font-weight: 600;
         transition: 0.4s ease;
     }
+    a:focus{
+        display: hidden;
+    }
     .btns .sign-in:hover{
         background-color: #fff;
         a{
             color: #f3683e;
+            
         }
+
     }
     .transparent{
         z-index: 2;
