@@ -141,8 +141,30 @@
 
 }
 #home-about{
-    height: 100vh;
+    height: 120vh;
+    .wrapper{
+        padding-top: 40px;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .text{
+        flex: 1;
+        padding: 50px;
+    }
+    .right-img{
+        // flex: 0.4;
+        justify-self: flex-end ;
+        padding: 50px;
+    }
+    img{
+        width: 80%;
+        height: 600px;
+        border: 10px solid rgba(17, 17, 17, 0.4);
+    }
 }
+
 
 // #index{
 //     height: 100vh;
