@@ -4,16 +4,18 @@
         <div class="transparent"></div>
         <div class="text">
             <h1>Welcome to Items! </h1>
-            <p>An app for organising, prioritising and storing all your online shopping<br> in the one place.</p>
-        </div>
-        <div class="btns">
-            <button class="sign-in"> <i class="fas fa-chevron-left"></i>
-                <% if user_signed_in? %>   
-                    <%= link_to "Show Cart", items_path %>
-                <% else %>
-                    <%= link_to " Lets Get Started!", new_user_registration_path %>
-                <% end %>
-            </button>
+            <%# <p>An app for organising, prioritising and storing all your online shopping<br> in the one place.</p> %>
+            <p>Designed to organise, prioritize, and store all your online shopping items<br> in the one place.</p>
+        
+            <div class="btns">
+                <button class="sign-in"> <i class="fas fa-chevron-left"></i>
+                    <% if user_signed_in? %>   
+                        <%= link_to "Show Cart", items_path %>
+                    <% else %>
+                        <%= link_to " Lets Get Started!", new_user_registration_path %>
+                    <% end %>
+                </button>
+            </div>
         </div>
     <%# </div> %>
 
