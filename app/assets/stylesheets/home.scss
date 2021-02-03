@@ -4,7 +4,7 @@
 
 //////////////////// Home-index styling ////////////////////
 #home-index{
-    height: 100vh; 
+    height: 120vh; 
     a{
         color: #fff;
     }
@@ -162,6 +162,57 @@
         width: 80%;
         height: 600px;
         border: 10px solid rgba(17, 17, 17, 0.4);
+        border: 10px solid rgba(20, 20, 20, 0.7);
+    }
+}
+#home-contact{
+    height: 100vh;
+}
+#home-footer{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    
+    #main-footer{
+        height: 20vh;
+        background-color: #1e242c;
+        background-color: #1b242f;
+        background-color: #141414;
+        border-top: solid 1px #616161;
+        // padding-bottom: 28px;
+        
+    }
+    
+    #main-footer i {
+        color: #fff;
+    }
+    #main-footer .footer-container {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+        margin: auto;
+        padding-top: 30px;
+    }
+    #main-footer .footer-container .instagram, .linkedin, .codepen, .github {
+        border: 1px solid #252934;
+        padding: 10px;
+        background-color: #252934;
+    }
+    
+    #main-footer h5 {
+        margin-top: 50px;
+        color: #616161;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 0px;
+    }
+    #main-footer .highlight {
+        
+        color: #e31b6d;
+        color: #f3683e;
     }
 }
 

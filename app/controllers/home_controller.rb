@@ -5,4 +5,8 @@ class HomeController < ApplicationController
   def about
     @header = "About Us"
   end
+
+  def contact
+    @header = "Contact"
+  end
 end
