@@ -9,7 +9,7 @@
         color: #fff;
     }
     h1{
-        font-size: 6vw;
+        font-size: 6.5vw;
         margin-bottom: 0;
         color: gray;
         color: #C0C0C0;
@@ -18,11 +18,13 @@
         font-weight: 900;
         color: #fff;
         letter-spacing: -5px;
+        font-family: 'Exo 2', sans-serif;
     }
     p{
         margin-top: 20px;
-        font-size: 1.2vw;
+        font-size: 1.5vw;
         color: #fff;
+        font-family: 'Alegreya Sans', sans-serif;
     }
     .showcase{
         // border-top: 3px solid red;
@@ -141,7 +143,7 @@
 
 }
 #home-about{
-    height: 120vh;
+    height: 140vh;
     .wrapper{
         padding-top: 40px;
         width: 90%;
